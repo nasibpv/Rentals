@@ -1,6 +1,12 @@
 // Show current year in footer
 document.getElementById('yr').textContent = new Date().getFullYear();
 
+window.onload = function () {
+  const now = new Date();
+  // Format to "YYYY-MM-DDTHH:MM"
+  const formatted = now.toISOString().slice(0,16);
+  document.getElementById('pickupTime').value = formatted;
+};
 // UPI settings
 const UPI_VPA = '8078330536@upi';
 const UPI_NAME = 'Kannur Bike Rentals';
