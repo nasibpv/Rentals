@@ -1,0 +1,111 @@
+:root { --yellow:#ffd400; --black:#111; }
+body { font-family: Inter, Arial, sans-serif; background:#fffbe6; margin:0; color:var(--black); }
+/* Rest of your CSS here... */
+:root {
+  --yellow: #ffd400;
+  --black: #111;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #fffbe6;
+  margin: 0;
+  color: var(--black);
+}
+
+header {
+  background: var(--yellow);
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.container {
+  max-width: 920px;
+  margin: 18px auto;
+  padding: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 18px;
+}
+
+.card {
+    max-width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+select,
+input {
+  width: fit-content;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--black);
+  color: var(--yellow);
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.btn.Whats {
+  background: #25d366;
+  color: white; /* green button */
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.note {
+  font-size: 13px;
+  color: #444;
+  margin-top: 8px;
+}
+
+.qr {
+  margin-top: 12px;
+  text-align: center;
+  padding: 10px;
+}
+
+footer {
+  padding: 16px;
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+  margin-top: 18px;
+}
+
+@media (max-width: 920px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

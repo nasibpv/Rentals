@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kannur Bike Rentals — Book & Pay (UPI)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Kannur Bike Rentals</h1>
+    <div style="margin-top:6px">Explore Now — Book & Pay via UPI or WhatsApp</div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <!-- Left: Booking form -->
+      <div class="card">
+        <h2>Book — Honda Activa 5G</h2>
+
+        <label>Pickup Location</label>
+        <select id="pickup">
+          <option value="Kannur Railway">Kannur Railway</option>
+          <option value="Kannur Bus Stand">Kannur Bus Stand</option>
+          <option value="Caltex">Caltex</option>
+          <option value="Kannur Rental Office">Kannur Rental Office</option>
+        </select>
+    
+
+        <label>Pickup Date & Time (24-hr)</label>
+        <input id="pickupTime" type="datetime-local">
+
+        <label>Drop-off Date & Time (24-hr)</label>
+        <input id="dropoffTime" type="datetime-local">
+
+        <div class="price" id="priceDisplay">Estimated total: ₹0.00</div>
+        <div class="note">Rates: ₹545/day (10% discount), ₹457/day for 7–21 days, ₹250/day for 22+ days, hourly available. </div>
+
+        <div style="margin-top:12px">
+          <button class="btn" onclick="calcPrice()">Calculate Price</button>
+        </div>
+
+        <div style="margin-top:14px" id="paymentArea" hidden>
+          <!-- WhatsApp Booking -->
+          <button class="btn Whats" onclick="bookWhatsApp()">
+            📱 Book via WhatsApp (8078330536)
+          </button>
+
+          <!-- UPI Payment -->
+          <!-- <div style="margin-top:10px">
+            <button class="btn" id="upiBtn" onclick="payUpi()" title="Open UPI app to pay">
+              💳 Pay via UPI
+            </button>
+            <div class="note" style="margin-top:8px">Or scan QR below using your UPI app (PhonePe, Google Pay, Paytm, BHIM).</div>
+
+            <div class="qr" id="qrWrap" style="display:none">
+              <img id="qrImg" src="" alt="UPI QR" style="max-width:200px;border-radius:8px;border:1px solid #ddd">
+              <div class="note" style="margin-top:8px">UPI number: <strong>8078330536</strong></div>
+              <div class="note">If scan fails, open your UPI app and send to <strong>8078330536</strong> (or use your bank VPA if different).</div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- Right: Summary / Logo / Info -->
+      <aside class="card">
+        <div style="text-align:center">
+          <!-- Replace with your logo file name if you have one -->
+          <img src="https://i.postimg.cc/mr3yVG0s/Chat-GPT-Image-Aug-12-2025-11-42-13-PM.png" alt="Kannur Bike Rentals" style="max-width:220px;border-radius:8px">
+        </div>
+
+        <h3 style="margin-top:12px">Booking summary</h3>
+        <div id="summary" class="note">Select pickup & drop-off to show summary here.</div>
+
+        <hr style="margin:12px 0">
+
+        <div>
+          <strong>WhatsApp (book):</strong><br>
+          <a href="https://wa.me/918078330536" target="_blank" style="color:#25D366;text-decoration:none;font-weight:700">+91 80783 30536</a>
+        </div>
+
+        <div style="margin-top:10px">
+          <strong>UPI (pay):</strong><br>
+          <div class="note"><strong>8078330536</strong></div>
+          <div class="note">Preferred VPA: <em>8078330536@upi</em> (replace with your actual VPA if different)</div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="yr"></span> Kannur Bike Rentals — Admin: Abdul Rashid — Email: kannurbikerentals@gmail.com
+  </footer>
+<script src="script.js"></script>
+
+</body>
+</html>
